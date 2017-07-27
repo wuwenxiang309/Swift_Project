@@ -14,7 +14,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
       
         //Swift项目使用Git
-        self.view.backgroundColor = UIColor.red
+        self.view.backgroundColor = UIColor.white
+        
+        let button = UIButton.init(type: .custom)
+        button.frame = CGRect.init(x: 0, y: 0, width: 30, height: 30)
+        button.setTitle("abc", for: .normal)
+        button.setTitleColor(UIColor.green, for: .normal)
+        button.addTarget(self, action: #selector(buttonClicked(button:)), for: .touchUpInside)
+        
+        self.view.addSubview(button)
+        
+        
         
     }
 
@@ -23,6 +33,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func buttonClicked(button: UIButton) {
+        
+        
+    }
+    
 
 }
 
